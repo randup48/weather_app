@@ -13,7 +13,7 @@ const year = d.getFullYear();
 
 document.addEventListener("DOMContentLoaded", async () => {
   const value = await getWeather();
-  const weatherIcon = `http://openweathermap.org/img/wn/${value.weather.icon}@2x.png`;
+  const weatherIcon = `https://openweathermap.org/img/wn/${value.weather.icon}@2x.png`;
 
   if (value !== undefined) {
     // document.body.innerHTML = "";
