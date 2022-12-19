@@ -19,4 +19,10 @@ const setSunriseSunset = ({ value = null, element = null }) => {
   element.setAttribute("sunset", `${helper.convertUnix(value.sys.sunset)}`);
 };
 
-export default { setCityCelcius, setForecast, setSunriseSunset };
+const setIconTab = ({ value = null, element = null }) => {
+  element.setAttribute("rel", "shortcut icon");
+  element.setAttribute("type", "image/x-icon");
+  element.setAttribute("href", value);
+};
+
+export default { setCityCelcius, setForecast, setSunriseSunset, setIconTab };

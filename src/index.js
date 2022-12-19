@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (value !== undefined) {
     // document.body.innerHTML = "";
     const navbar = document.createElement("custom-header");
+    const icon = document.createElement("link");
 
     const main = document.createElement("main");
 
@@ -31,12 +32,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const forecast = document.createElement("fore-cast");
     set.setForecast({ value: value, element: forecast, icon: weatherIcon });
+    set.setIconTab({
+      value: `https://openweathermap.org/img/wn/${value.weather.icon}.png`,
+      element: icon,
+    });
 
     const SunriseSunset = document.createElement("sunrise-sunset");
     set.setSunriseSunset({ value: value, element: SunriseSunset });
 
+    document.head.append(icon);
     main.append(city, forecast, SunriseSunset);
-
     document.body.append(navbar, days, dateMonthYear, main);
   }
 });
