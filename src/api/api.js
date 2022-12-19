@@ -12,14 +12,12 @@ const getData = axios
     },
   })
   .then((response) => {
-    // console.log(response);
     return {
       data: response.data,
       isSuccess: true,
     };
   })
   .catch((error) => {
-    // console.log(error);
     return error["response"] !== undefined
       ? {
           message: error["response"]["data"]["message"],

@@ -14,7 +14,6 @@ const year = d.getFullYear();
 document.addEventListener("DOMContentLoaded", async () => {
   const value = await getWeather();
   const weatherIcon = `http://openweathermap.org/img/wn/${value.weather.icon}@2x.png`;
-  // console.log(weatherIcon);
 
   if (value !== undefined) {
     // document.body.innerHTML = "";
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 const getWeather = async () => {
   const result = await request.getData;
-  console.log(result);
+
   try {
     if (result.isSuccess == true) {
       const data = result.data;
@@ -72,7 +71,6 @@ const getWeather = async () => {
       document.body.innerText = `${result.errorCode} : ${result.message}`;
     }
   } catch (error) {
-    console.log(error);
     document.body.innerHTML = "";
     document.body.innerText = error;
   }
