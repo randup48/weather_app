@@ -43,6 +43,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.head.append(icon);
     main.append(city, forecast, SunriseSunset);
     document.body.append(navbar, days, dateMonthYear, main);
+
+    const fontGoogle = document.createElement("link");
+    fontGoogle.rel = "preconnect";
+    fontGoogle.href = "https://fonts.googleapis.com";
+
+    const fontApiGoogle = document.createElement("link");
+    fontApiGoogle.rel = "preconnect";
+    fontApiGoogle.href = "https://fonts.gstatic.com";
+
+    const fontStyleGoogle = document.createElement("link");
+    fontStyleGoogle.rel = "stylesheet";
+    fontStyleGoogle.href =
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap";
+    fontStyleGoogle.disabled = true;
+    fontStyleGoogle.media = "all";
+
+    document.head.append(fontGoogle, fontApiGoogle, fontStyleGoogle);
   }
 });
 

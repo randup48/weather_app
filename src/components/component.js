@@ -68,7 +68,7 @@ class Forecast extends HTMLElement {
           <h5>${this.desc}</h5>
         </div>
 
-        <img src='${this.icon}'></img>
+        <img src='${this.icon}' alt='weather icon'  width='60px' height='auto'></img>
       </section>
 
       <section>
